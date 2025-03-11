@@ -229,7 +229,6 @@ loginBtn.addEventListener("click", () => {
     isLoggedIn = false;
     loginBtn.textContent = "Login";
     bookShow.style.display = "block";
-    window.location.reload();
     usernameInput.value = "";
     dobLogin.value = "";
     passwordInput.value = "";
@@ -258,6 +257,11 @@ submitLogin.addEventListener("click", () => {
   if (username.length < 4 || password.length < 4) {
     alert("Username and Password should have at least 4 characters.");
     return;
+  }
+
+  if (dob > new Date()) {
+    alert("You are selected future date. Please enter correct date!");
+    
   }
 
   const age = new Date().getFullYear() - dob.getFullYear();
