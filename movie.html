@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Tickets</title>
+    <link rel="stylesheet" href="movie.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assests/unnamed.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <span>Book</span><span class="A"><i>A</i></span
+        ><span>Movie</span>
+      </div>
+
+      <div class="user-info">
+        <select name="loc" id="loc">
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Delhi">Delhi</option>
+        </select>
+        <div class="user-profile">
+          <span><i class="fa-solid fa-circle-user"></i></span>
+          <button id="login">Login</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="search-movies">
+      <input type="text" id="searchInput" placeholder="Search for movies..." />
+    </section>
+
+    <section id="movieContent"></section>
+
+    <div id="loginModal">
+      <div class="login-content">
+        <span id="closeLoginModal" class="close">×</span>
+        <h2>Login</h2>
+        <div>
+          <input type="text" id="username" placeholder="Enter your username" />
+        </div>
+        <div>
+          <input type="date" id="dobLogin" placeholder="Enter your DOB" />
+        </div>
+        <div>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+          />
+        </div>
+        <button id="submitLogin">Login</button>
+      </div>
+    </div>
+
+    <div id="bookingModal">
+      <div class="modal-content">
+        <span id="closeBookingModal" class="close">×</span>
+        <div class="booked-content">
+          <h2>Booking Successful</h2>
+          <p><strong>Username: </strong><span id="bookingUsername"></span></p>
+          <p><strong>Movie: </strong><span id="bookingMovie"></span></p>
+          <p><strong>Time selected: </strong><span id="bookingTime"></span></p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="icon">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-regular fa-envelope"></i>
+      </div>
+      <p class="footer-content">
+        Copyright 2025 © Venkat Vadlakonda All Rights Reserved
+      </p>
+    </footer>
+    <script src="movie.js"></script>
+  </body>
+</html>
