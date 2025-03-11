@@ -163,7 +163,6 @@ const movies = [
 ];
 
 const searchInput = document.getElementById("searchInput");
-const bookShow = document.getElementById("bookShow");
 const movieContent = document.getElementById("movieContent");
 const loginBtn = document.getElementById("login");
 const loginModal = document.getElementById("loginModal");
@@ -228,7 +227,6 @@ loginBtn.addEventListener("click", () => {
   if (isLoggedIn) {
     isLoggedIn = false;
     loginBtn.textContent = "Login";
-    bookShow.style.display = "block";
     usernameInput.value = "";
     dobLogin.value = "";
     passwordInput.value = "";
