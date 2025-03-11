@@ -274,7 +274,7 @@ submitLogin.addEventListener("click", () => {
   currentMovies = movies.filter((movie) => age >= movie.ageRestriction);
   displayMovies(currentMovies);
 
-  alert("Login successful! You are now logged in.");
+  alert("Login successful");
 });
 
 searchInput.addEventListener("input", () => {
