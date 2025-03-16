@@ -172,6 +172,7 @@ const usernameInput = document.getElementById("username");
 const dobLogin = document.getElementById("dobLogin");
 const passwordInput = document.getElementById("password");
 const confirmation = document.getElementById("confirmation");
+const footer = document.getElementById("footer");
 const bookingModal = document.getElementById("bookingModal");
 const closeBookingModal = document.getElementById("closeBookingModal");
 const bookingUsername = document.getElementById("bookingUsername");
@@ -227,11 +228,12 @@ loginBtn.addEventListener("click", () => {
   if (isLoggedIn) {
     isLoggedIn = false;
     loginBtn.textContent = "Login";
+    document.location.reload();
+  } else {
+    loginModal.style.display = "block";
     usernameInput.value = "";
     dobLogin.value = "";
     passwordInput.value = "";
-  } else {
-    loginModal.style.display = "block";
   }
 });
 
@@ -259,7 +261,6 @@ submitLogin.addEventListener("click", () => {
 
   if (dob > new Date()) {
     alert("You are selected future date. Please enter correct date!");
-    
   }
 
   const age = new Date().getFullYear() - dob.getFullYear();
@@ -272,6 +273,8 @@ submitLogin.addEventListener("click", () => {
   loginBtn.textContent = "Logout";
 
   loginModal.style.display = "none";
+
+  footer.style.position = "fixed";
 
   currentMovies = movies.filter((movie) => age >= movie.ageRestriction);
   displayMovies(currentMovies);
